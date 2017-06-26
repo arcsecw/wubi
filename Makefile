@@ -1,4 +1,4 @@
 tests:
-	python test_pinyin.py
-	python3 test_pinyin.py
+	python test_wubi.py
+	python3 test_wubi.py
 

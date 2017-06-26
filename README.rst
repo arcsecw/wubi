@@ -31,11 +31,15 @@ Short introduce
 .. code:: python
 
     >>> import wubi
-    >>> print wubi.get('王文超，爱自由。','cw')
-    gggg yygy fhv , ep thd mh .
+    >>> print wubi.get('WenChaoWang爱自由','cw')
+    WenChaoWang ep thd mh
 
-    >>> print wubi.get('gggg yygy fhv , ep thd mh .','wc')
-    王文超，爱自由。
+    >>> print wubi.get('WenChaoWang ep thd mh','wc')
+    WenChaoWang爱自由
+
+.. notice
+    when your chinese text within english the ' ' will be drop
+    //TODO
 
 Long introduce
 ------

@@ -24,11 +24,22 @@ def _wubi_generator(chars):
     itself will be returned.
     Chars must be unicode list.
     """
+    s = []
     for char in chars:
-        wubi = data['cw'].get(char)
-        if wubi == None:
-            wubi=char
-        yield wubi
+        # handle english in chinese
+        var =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+        if char ==' ':
+            pass
+        elif char in var :
+                s.append(char)
+        else:
+            if len(s)!=0:
+                yield ''.join(s)
+                s=[]
+            wubi = data['cw'].get(char)
+            if wubi == None:
+                wubi=char
+            yield wubi
 
 
 def _chinese_generator(chars, delimiter):
@@ -39,12 +50,15 @@ def _chinese_generator(chars, delimiter):
     for char in chars.split(delimiter):
         chinese = data['wc'].get(char)
         if chinese ==None:
-            chinese=char
+                chinese=char
         yield chinese
 
 def get(s,type='',delimiter=' '):
-    """Return pinyin of string, the string must be unicode
+    """Return wubi of string, the string must be unicode
     """
+    #pre process input string
+
+
     if type=='cw':
         return delimiter.join(_wubi_generator(u(s)))
     elif type =='wc':
