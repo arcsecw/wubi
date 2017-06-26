@@ -53,6 +53,3 @@ License
 
 `wubi` is free software, under an MIT-style license. See LICENSE for details.
 
-The data file for translations is the CC-BY-SA 3.0.
-
-The translations are from the CC-CE-DICT project (https://cc-cedict.org/wiki/), by Denisowski, Peterson, Brelsford, and others.
