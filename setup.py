@@ -3,22 +3,31 @@
 
 from io import open
 
-from setuptools import setup
+from setuptools import setup,find_packages
+
+from codecs import open
+from os import path
+
+here = path.abspath(path.dirname(__file__))
+
+# Get the long description from the README file
+with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name='wubi',
-    version='0.0.1',
+    version='0.0.2',
     description='Translate chinese chars to wubi',
+    long_description=long_description,
     author='arcsecw',
     author_email='tob-wang@qq.com',
-    packages=['wubi',],
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     package_data={
         '': ['LICENSE'],
         'wubi': ['wubi.cPickle'], },
     entry_points={"console_scripts": ["wubi = wubi.cmd:wubi", ]},
     url='https://github.com/arcsecw/wubi',
     license="BSD",
-    long_description=open('README.rst', encoding='utf-8').read(),
     classifiers=[
         "Topic :: Software Development",
         "Development Status :: 4 - Beta",
