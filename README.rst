@@ -41,15 +41,16 @@ Short introduce
     >>> print wubi.get('WenChaoWang-ep-thd-mh','wc','-')
     WenChaoWang爱自由
 
-.. notice
+notice
+------
 
     you can add your own char->char by modify ./wubi/build_map.py.
+
     通过修改./wubi/build_map.py文件,你可以自行添加新的映射关系。
 
-.. notice
 
-    when your chinese text within english the ' ' will be drop
-    //TODO
+    //TODO when your chinese text within english the ' ' will be drop
+
 
 Long introduce
 ------
