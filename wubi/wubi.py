@@ -4,7 +4,7 @@ import os
 import itertools
 import unicodedata
 
-import cPickle
+import pickle
 
 from _compat import u
 
@@ -13,10 +13,10 @@ __all__ = ['get']
 
 # init wubi dict
 data = {}
-dat = os.path.join(os.path.dirname(__file__), "wubi.cPickle")
+dat = os.path.join(os.path.dirname(__file__), "wubi.pickle")
 
 with open(dat) as f:
-    data = cPickle.loads(f.read())
+    data = pickle.loads(f.read())
 
 
 def _wubi_generator(chars):
@@ -32,6 +32,8 @@ def _wubi_generator(chars):
             pass
         elif char in var :
                 s.append(char)
+                if char==chars[-1]:
+                    yield ''.join(s)
         else:
             if len(s)!=0:
                 yield ''.join(s)

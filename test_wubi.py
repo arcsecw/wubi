@@ -14,6 +14,8 @@ class BasicTestSuite(unittest.TestCase):
         self.assertEqual(wubi.get('WenChao Wang 爱自由','cw'),'WenChaoWang ep thd mh')
     def test_chinese_with_english3(self):
         self.assertEqual(wubi.get('WenChaoWang 爱自由','cw'),'WenChaoWang ep thd mh')
+    def test_chinese_with_english4(self):
+        self.assertEqual(wubi.get('爱wang','cw'),'ep wang')
 
     def test_wibi_with_english1(self):
         self.assertEqual(wubi.get('WenChaoWang ep thd mh','wc'),u('WenChaoWang爱自由'))

@@ -16,7 +16,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='wubi',
-    version='0.0.2',
+    version='0.0.4',
     description='Translate chinese chars to wubi',
     long_description=long_description,
     author='arcsecw',
