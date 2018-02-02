@@ -1,0 +1,6 @@
+dist/
+build/
+wubi.egg-info
+.idea/
+.git
+*.DS_Store

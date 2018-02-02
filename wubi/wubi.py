@@ -8,15 +8,24 @@ import pickle
 
 from _compat import u
 
-__all__ = ['get']
+__all__ = ['get','data']
 
 
 # init wubi dict
 data = {}
 dat = os.path.join(os.path.dirname(__file__), "wubi.pickle")
 
-with open(dat) as f:
-    data = pickle.loads(f.read())
+try :
+    with open(dat) as f:
+        data = pickle.loads(f.read())
+except:
+    pass
+
+if len(data)<1:
+    from cw import cw
+    from wc import wc
+    data['cw'] = cw
+    data['wc'] = wc
 
 
 def _wubi_generator(chars):

@@ -40,6 +40,18 @@ Short introduce
     WenChaoWang-ep-thd-mh
     >>> print wubi.get('WenChaoWang-ep-thd-mh','wc','-')
     WenChaoWang爱自由
+    >>> data = wubi.data
+    ## data = {
+    'cw':{
+        chinese:wubi,
+        ...
+        }
+    'wc':{
+        wubi:chinese,
+        ...
+        }
+    }
+
 
 notice
 ------

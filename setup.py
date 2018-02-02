@@ -16,7 +16,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='wubi',
-    version='0.0.4',
+    version='1.0',
     description='Translate chinese chars to wubi',
     long_description=long_description,
     author='arcsecw',
@@ -24,7 +24,7 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     package_data={
         '': ['LICENSE'],
-        'wubi': ['wubi.cPickle'], },
+        'wubi': ['wubi.pickle'], },
     entry_points={"console_scripts": ["wubi = wubi.cmd:wubi", ]},
     url='https://github.com/arcsecw/wubi',
     license="BSD",
